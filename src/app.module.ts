@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { CatsModule } from './cats/cats.module';
+import { CatsModule } from './modules/cats/cats.module';
 // import { TypeOrmModule } from '@nestjs/typeorm';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config'; // 加載環境變數

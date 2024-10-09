@@ -16,7 +16,7 @@ import { CreateCatDto } from './dto/create-cat.dto';
 import { CatsService } from './cats.service';
 // import { Cat } from './entity/cat.entity';
 import { Cat } from './schemas/cat.schema';
-import { ValidationPipe } from '../common/pipe/validate.pipe';
+import { ValidationPipe } from 'src/common/pipe/validate.pipe';
 
 @Controller('cats')
 export class CatsController {

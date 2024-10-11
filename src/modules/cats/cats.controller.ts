@@ -14,8 +14,8 @@ import {
 // import { Request } from 'express';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { CatsService } from './cats.service';
-// import { Cat } from './entity/cat.entity';
-import { Cat } from './schemas/cat.schema';
+import { Cat } from './entity/cat.entity';
+// import { Cat } from './schemas/cat.schema';
 import { ValidationPipe } from 'src/common/pipe/validate.pipe';
 
 @Controller('cats')
@@ -29,7 +29,11 @@ export class CatsController {
   // @Header('Cache-Control', 'none')
   // @Redirect('https://docs.nestjs.com', 302)
   async create(@Body() createCatDto: CreateCatDto) {
-    return this.catsService.create(createCatDto);
+    const newCat = new Cat();
+    newCat.name = createCatDto.name;
+    newCat.age = createCatDto.age;
+    newCat.breed = createCatDto.breed;
+    return this.catsService.create(newCat);
   }
 
   // http://localhost:3000/cats/

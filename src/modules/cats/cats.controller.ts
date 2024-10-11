@@ -44,9 +44,9 @@ export class CatsController {
   }
 
   // http://localhost:3000/cats/123
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return `This action returns a #${id} cat`;
+  @Get(':name')
+  findOne(@Param('name') name: string) {
+    return this.catsService.findName(name);
   }
 
   @Delete(':id')

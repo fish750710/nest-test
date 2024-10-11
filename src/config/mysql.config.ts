@@ -11,6 +11,6 @@ export const database: TypeOrmModuleOptions = {
   username: 'root',
   password: '1234',
   database: 'nestdb', // 對應 mysql 資料庫名稱
-  entities: [Cat], // 加入實體
+  entities: [Cat], // 載入實體模型
   synchronize: false, // true 不能用在生產環境 (自動同步數據庫)
 };
